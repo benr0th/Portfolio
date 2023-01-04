@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <h1>Ben Roth</h1><br />
+  <p id="back-button" style="display: none" onclick="optionSelect('back')">Back</p>
+  <p id="press-start">Press Start to Begin</p><br />
+  <div id="options-parent">
+    <div id="start-button" class="start-button" onclick="optionSelect('start')">Press Start</div>
+    <div id="options" style="display: none">
+      <a href="https://www.github.com/benr0th" class="fa-brands fa-github" target="_blank"></a>
+      <a href="https://www.linkedin.com/in/benroth3" class="fa-brands fa-linkedin" target="_blank"></a>
+      <div id="option-1" class="option selected" onclick="optionSelect('editing')">Video Editing</div>
+      <div id="option-2" class="option" onclick="optionSelect('gameDev')">Game Dev</div>
+      <div id="option-3" class="option" onclick="optionSelect('programming')">Programming</div>
+    </div>
+  </div>
+  <div id="editing" style="display: none">
+    <iframe src="https://player.vimeo.com/video/311963855?h=fe92a30c98&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Tracey Re:Fragmented"></iframe>
+    <iframe src="https://player.vimeo.com/video/288795892?h=33c8ea49ea&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Blaudio Case Ad"></iframe>
+    <iframe src="https://player.vimeo.com/video/279712989?h=6a1b88a032&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="AdSurgeVideo Ad"></iframe>
+  </div>
+  <div id="gameDev" style="display: none">
+    <div id="box" style="display: none">
+    <a href="https://play.google.com/store/apps/details?id=com.BRothStudios.Gravibowl&hl=en_US&gl=US" target="_blank">
+      Gravibowl
+    </a>
+    </div>
+    <div id="box" style="display: none"></div>
+
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
