@@ -31,7 +31,12 @@ function optionSelect(option) {
   else if (option === "gameDev") {
     hideOptions();
     showElement("gameDev", "block");
-    showElement("box", "inline-block");
+    showElement("gBox-1", "inline-block");
+  }
+  else if (option === "programming") {
+    hideOptions();
+    showElement("programming", "block");
+    showElement("progBox-1", "inline-block");
   }
 }
 
@@ -65,3 +70,17 @@ for (var i = 0; i < options.length; i++) {
     this.classList.add("selected");
   });
 }
+
+// let cursor = document.getElementById('cursor');
+// let constraint = document.getElementById('progBox-1');
+// let width = constraint.offsetLeft;
+// let height = constraint.offsetTop;
+// onmousemove = (e) =>{
+
+
+//   if (e.pageX < width && e.pageY < height) {
+//     console.log('goo');
+//     cursor.style.left = e.pageX + 'px';
+//     cursor.style.top = e.pageY + 'px';
+//   } else { console.log('no good')}
+// }

@@ -51,7 +51,6 @@ iframe {
 .option.selected:before {
   opacity: 1;
   left: -30px;
-
 }
 .option.hovered:before {
   opacity: 0;
@@ -69,7 +68,7 @@ iframe {
   display: flex;
   justify-content: center;
 }
-#box {
+.box {
   display: inline-block;
   width: 300px;
   height: 300px;
@@ -83,4 +82,7 @@ iframe {
   color: white; 
   font-size: 30px; 
   text-decoration: none;
+}
+#cursor {
+  position: absolute;
 }
