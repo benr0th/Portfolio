@@ -1,6 +1,6 @@
 function hideOptions() {
   hideElement("options");
-  showElement("back-button", "block");
+  showElement("back-button", "");
 }
 
 function hideElement(element) {
@@ -30,13 +30,14 @@ function optionSelect(option) {
   }
   else if (option === "gameDev") {
     hideOptions();
-    showElement("gameDev", "block");
-    showElement("gBox-1", "inline-block");
+    showElement("gameDev", "grid");
+    showElement("gameDev-1", "inline-block");
   }
   else if (option === "programming") {
     hideOptions();
-    showElement("programming", "block");
-    showElement("progBox-1", "inline-block");
+    showElement("programming", "grid");
+    showElement("programming-1", "inline-block");
+    showElement("programming-2", "inline-block");
   }
 }
 
@@ -71,16 +72,8 @@ for (var i = 0; i < options.length; i++) {
   });
 }
 
-// let cursor = document.getElementById('cursor');
-// let constraint = document.getElementById('progBox-1');
-// let width = constraint.offsetLeft;
-// let height = constraint.offsetTop;
-// onmousemove = (e) =>{
-
-
-//   if (e.pageX < width && e.pageY < height) {
-//     console.log('goo');
-//     cursor.style.left = e.pageX + 'px';
-//     cursor.style.top = e.pageY + 'px';
-//   } else { console.log('no good')}
-// }
+let typed = new Typed('#bio', {
+  strings: ['Hi there my name is Ben I like to code and learn things^1000 <br> The things I learn are pretty cool sometimes\n'],
+  typeSpeed: 20,
+  loop: false
+});

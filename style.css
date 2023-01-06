@@ -62,7 +62,6 @@ iframe {
   margin: auto;
   position: relative;
   cursor: pointer;
-  font-size: 23px;
 }
 #options-parent {
   display: flex;
@@ -76,13 +75,101 @@ iframe {
   border: 5px solid white;
   position: relative;
   margin-top: 40px;
-  top: 40%;
 }
-.fa-brands {
+.fa-brands, .fa-solid {
   color: white; 
-  font-size: 30px; 
+  font-size: 40px; 
   text-decoration: none;
 }
-#cursor {
+/* Grid layout */
+#programming {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 300px 300px 300px;
+  grid-template-rows: auto;
+  grid-gap: 50px;
+}
+#gameDev {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 300px;
+  grid-template-rows: auto;
+  grid-gap: 50px;
+}
+
+/* Panel magic */
+#gBox-1 .gravThumbnail,
+#progBox-1 .portThumbnail,
+#progBox-2 .cohThumbnail {
+  position: relative;
+  z-index: 1;
+}
+#gBox-1 #gBowlText,
+#progBox-1 #portText,
+#progBox-2 #cohText {
+  visibility: hidden;
   position: absolute;
+  top: 10%;
+  z-index: 2;
+  line-height: 130%;
+}
+#gBox-1:hover .gravThumbnail,
+#progBox-1:hover .portThumbnail,
+#progBox-2:hover .cohThumbnail {
+  opacity: 0.3;
+}
+/* cleaner way to do this? */
+#gBox-1:hover #gBowlText,
+#gBox-1:hover .fa-unity,
+#gBox-1:hover .cSharpLogo,
+#progBox-1:hover #portText,
+#progBox-2:hover #cohText,
+#progBox-1:hover .fa-html5,
+#progBox-1:hover .fa-css3-alt,
+#progBox-1:hover .fa-js,
+#progBox-2:hover .fa-python {
+  visibility: visible;
+}
+/* Logo positioning */
+#gBox-1 .cSharpLogo {
+  position: absolute;
+  z-index: 2;
+  left: 60%;
+  top: 80%;
+  visibility: hidden;
+}
+#gBox-1 .fa-unity {
+  position: absolute;
+  z-index: 2;
+  left: 30%;
+  top: 80%;
+  visibility: hidden;
+}
+#progBox-1 .fa-html5 {
+  position: absolute;
+  z-index: 2;
+  left: 25%;
+  top: 80%;
+  visibility: hidden;
+}
+#progBox-1 .fa-css3-alt {
+  position: absolute;
+  z-index: 2;
+  left: 45%;
+  top: 80%;
+  visibility: hidden;
+}
+#progBox-1 .fa-js {
+  position: absolute;
+  z-index: 2;
+  left: 65%;
+  top: 80%;
+  visibility: hidden;
+}
+#progBox-2 .fa-python {
+  position: absolute;
+  z-index: 2;
+  left: 45%;
+  top: 80%;
+  visibility: hidden;
 }
