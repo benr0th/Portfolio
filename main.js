@@ -38,6 +38,7 @@ function optionSelect(option) {
     showElement("programming", "grid");
     showElement("programming-1", "inline-block");
     showElement("programming-2", "inline-block");
+    showElement("programming-3", "inline-block");
   }
 }
 
@@ -77,3 +78,4 @@ let typed = new Typed('#bio', {
   typeSpeed: 20,
   loop: false
 });
+

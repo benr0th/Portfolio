@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
 </head>
 <body>
   <h1>Ben Roth</h1><br />
@@ -19,16 +20,19 @@
       <i class="fa-solid fa-arrow-left" onclick="location.reload()" style="cursor: pointer"></i>
       <a href="https://www.github.com/benr0th" class="fa-brands fa-github" target="_blank"></a>
       <a href="https://www.linkedin.com/in/benroth3" class="fa-brands fa-linkedin" target="_blank"></a>
+      <!-- The main options. Clicking one hides the selections and displays the projects of the chosen section -->
       <div id="option-1" class="option" onclick="optionSelect('programming')">Programming</div>
       <div id="option-2" class="option" onclick="optionSelect('gameDev')">Game Dev</div>
       <div id="option-3" class="option selected" onclick="optionSelect('editing')">Video Editing</div>
     </div>
   </div>
+  <!-- Editing Section -->
   <div id="editing" style="display: none">
     <iframe src="https://player.vimeo.com/video/311963855?h=fe92a30c98&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Tracey Re:Fragmented"></iframe>
     <iframe src="https://player.vimeo.com/video/288795892?h=33c8ea49ea&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Blaudio Case Ad"></iframe>
     <iframe src="https://player.vimeo.com/video/279712989?h=6a1b88a032&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="AdSurgeVideo Ad"></iframe>
   </div>
+  <!-- Game Development Section -->
   <div id="gameDev" style="display: none">
     <div id="gameDev-1" class="box" style="display: none">
       <div id="gBox-1">
@@ -43,6 +47,7 @@
     </div>
     <div id="gameDev-2" class="box" style="display: none"></div>
   </div>
+  <!-- Programming Section -->
   <div id="programming" style="display: none">
     <div id="programming-1" class="box" style="display: none">
       <div id="progBox-1">
@@ -58,6 +63,19 @@
     </div>
     <div id="programming-2" class="box" style="display: none">
       <div id="progBox-2">
+        <a href="https://brothstudios.pythonanywhere.com" target="_blank" style="color: white">
+          <div id="playlistText">A website to search your YouTube playlists.</div>
+          <img src="./playlistScreen.png" class="playlistThumbnail" height="300" width="300">
+        </a>
+        <i class="fa-brands fa-python"></i>
+        <i class="fa-brands fa-html5"></i>
+        <i class="fa-brands fa-css3-alt"></i>
+        <i class="fa-brands fa-js"></i>
+      </div>
+      <br>YouTube Playlist Search <a href="https://github.com/benr0th/PlaylistSearch" class="fa-brands fa-github" target="_blank"></a>
+    </div>
+    <div id="programming-3" class="box" style="display: none">
+      <div id="progBox-3">
         <a href="https://replit.com/@atomicbentobox/CoHRando" target="_blank" style="color: white">
           <div id="cohText">Randomly chooses an Archetype and Powerset combination from the game City of Heroes.</div>
           <img src="./cohScreen.png" class="cohThumbnail" height="300" width="300">

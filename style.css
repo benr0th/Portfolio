@@ -1,12 +1,13 @@
 body {
   background-color: black;
   color: white;
-  text-align: center;
   font-family: "Press Start 2P", sans-serif;
+  text-align: center;
 }
 h1 {
   font-size: 72px;
   margin-top: 100px;
+  text-align: center;
 }
 iframe {
   padding: 7px;
@@ -15,11 +16,16 @@ iframe {
   font-size: 36px;
   margin-top: 50px;
   animation: flash 1s infinite;
+  text-align: center;
 }
 @keyframes flash {
   50% {
     opacity: 0;
   }
+}
+canvas {
+  position: absolute;
+  z-index: -1;
 }
 .start-button, .option {
   display: flex;
@@ -62,10 +68,12 @@ iframe {
   margin: auto;
   position: relative;
   cursor: pointer;
+  text-align: center;
 }
 #options-parent {
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 .box {
   display: inline-block;
@@ -88,6 +96,7 @@ iframe {
   grid-template-columns: 300px 300px 300px;
   grid-template-rows: auto;
   grid-gap: 50px;
+  text-align: center;
 }
 #gameDev {
   display: grid;
@@ -95,18 +104,21 @@ iframe {
   grid-template-columns: 300px;
   grid-template-rows: auto;
   grid-gap: 50px;
+  text-align: center;
 }
 
 /* Panel magic */
 #gBox-1 .gravThumbnail,
 #progBox-1 .portThumbnail,
-#progBox-2 .cohThumbnail {
+#progBox-2 .playlistThumbnail,
+#progBox-3 .cohThumbnail {
   position: relative;
   z-index: 1;
 }
 #gBox-1 #gBowlText,
 #progBox-1 #portText,
-#progBox-2 #cohText {
+#progBox-2 #playlistText,
+#progBox-3 #cohText {
   visibility: hidden;
   position: absolute;
   top: 10%;
@@ -115,7 +127,8 @@ iframe {
 }
 #gBox-1:hover .gravThumbnail,
 #progBox-1:hover .portThumbnail,
-#progBox-2:hover .cohThumbnail {
+#progBox-2:hover .playlistThumbnail,
+#progBox-3:hover .cohThumbnail {
   opacity: 0.3;
 }
 /* cleaner way to do this? */
@@ -123,11 +136,16 @@ iframe {
 #gBox-1:hover .fa-unity,
 #gBox-1:hover .cSharpLogo,
 #progBox-1:hover #portText,
-#progBox-2:hover #cohText,
+#progBox-2:hover #playlistText,
+#progBox-3:hover #cohText,
 #progBox-1:hover .fa-html5,
 #progBox-1:hover .fa-css3-alt,
 #progBox-1:hover .fa-js,
-#progBox-2:hover .fa-python {
+#progBox-2:hover .fa-python,
+#progBox-2:hover .fa-html5,
+#progBox-2:hover .fa-css3-alt,
+#progBox-2:hover .fa-js,
+#progBox-3:hover .fa-python {
   visibility: visible;
 }
 /* Logo positioning */
@@ -167,6 +185,33 @@ iframe {
   visibility: hidden;
 }
 #progBox-2 .fa-python {
+  position: absolute;
+  z-index: 2;
+  left: 15%;
+  top: 80%;
+  visibility: hidden;
+}
+#progBox-2 .fa-html5 {
+  position: absolute;
+  z-index: 2;
+  left: 35%;
+  top: 80%;
+  visibility: hidden;
+}
+#progBox-2 .fa-css3-alt {
+  position: absolute;
+  z-index: 2;
+  left: 55%;
+  top: 80%;
+  visibility: hidden;
+}#progBox-2 .fa-js {
+  position: absolute;
+  z-index: 2;
+  left: 75%;
+  top: 80%;
+  visibility: hidden;
+}
+#progBox-3 .fa-python {
   position: absolute;
   z-index: 2;
   left: 45%;
