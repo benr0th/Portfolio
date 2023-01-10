@@ -86,5 +86,50 @@
     </div>
   </div>
   <script type="module" src="/src/main.js"></script>
+  <script>
+    function hideOptions() {
+      hideElement("options");
+      showElement("back-button", "");
+    }
+    
+    function hideElement(element) {
+      document.getElementById(element).style.display = "none";
+    }
+    
+    function showElement(element, style) {
+      document.getElementById(element).style.display = style;
+    }
+    
+    function optionSelect(option) {
+      if (option === "start") {
+        hideElement("start-button");
+        hideElement("press-start");
+        showElement("options", "block");
+      }
+      else if (option === "back") {
+        showElement("options", "block");
+        hideElement("back-button");
+        hideElement("editing");
+        hideElement("gameDev");
+        hideElement("programming");
+      }
+      else if (option === "editing") {
+        hideOptions();
+        showElement("editing", "block");
+      }
+      else if (option === "gameDev") {
+        hideOptions();
+        showElement("gameDev", "grid");
+        showElement("gameDev-1", "inline-block");
+      }
+      else if (option === "programming") {
+        hideOptions();
+        showElement("programming", "grid");
+        showElement("programming-1", "inline-block");
+        showElement("programming-2", "inline-block");
+        showElement("programming-3", "inline-block");
+      }
+    }
+  </script>
 </body>
 </html>
