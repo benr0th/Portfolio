@@ -13,7 +13,6 @@
   <h1>Ben Roth</h1><br />
   <i id="back-button" class="fa-solid fa-arrow-left" style="display: none" onclick="optionSelect('back')"></i>
   <p id="press-start">Press Start to Begin</p><br />
-  <!-- <span id="bio" class="auto-type"></span><br><br><br> -->
   <div id="options-parent">
     <div id="start-button" class="start-button" onclick="optionSelect('start')">Press Start</div>
     <div id="options" style="display: none">
@@ -51,7 +50,7 @@
   <div id="programming" style="display: none">
     <div id="programming-1" class="box" style="display: none">
       <div id="progBox-1">
-        <a href="http://localhost:5173" style="color: white">
+        <a href="https://www.benroth.dev" style="color: white">
           <div id="portText"><br />You are here. Thank you for visiting!</div>
           <img src="./portScreen.png" class="portThumbnail" height="300" width="300">
         </a>
@@ -91,15 +90,15 @@
       hideElement("options");
       showElement("back-button", "");
     }
-    
+
     function hideElement(element) {
       document.getElementById(element).style.display = "none";
     }
-    
+
     function showElement(element, style) {
       document.getElementById(element).style.display = style;
     }
-    
+
     function optionSelect(option) {
       if (option === "start") {
         hideElement("start-button");
@@ -130,6 +129,28 @@
         showElement("programming-3", "inline-block");
       }
     }
+
+    document.addEventListener("keydown", function(event) {
+      var selectedOption = document.getElementsByClassName("selected")[0];
+      if (document.getElementById("start-button").style.display === "none") {
+        if (event.code === "ArrowDown") {
+          var nextOption = selectedOption.nextElementSibling;
+          if (nextOption) {
+            selectedOption.classList.remove("selected");
+            nextOption.classList.add("selected");
+          }
+        } else if (event.code === "ArrowUp") {
+          var prevOption = selectedOption.previousElementSibling;
+          if (prevOption) {
+            selectedOption.classList.remove("selected");
+            prevOption.classList.add("selected");
+          }
+        }
+        if (event.code === "Enter") {
+          document.getElementsByClassName("selected")[0].click();
+        }
+      }
+    });
   </script>
 </body>
 </html>
