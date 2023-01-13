@@ -7,10 +7,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
 </head>
 <body>
-  <h1>Ben Roth</h1><br />
+  <h1 id="name">Ben Roth</h1><br />
+  <p id="mainBio" class="bio" style="display: none">I'm Ben Roth. A problem-solver at heart with a passion for technology and learning.</p>
+  <p id="progBio" class="bio" style="display: none">I've learned a few programming languages including Python, Javascript, and C#.</p>
+  <p id="gameBio" class="bio" style="display: none">As a video game lover I learned game development, using Unity to start with.</p>
+  <p id="videoBio" class="bio" style="display: none">I graduated from Emerson College with a BA in Video Editing.</p>
   <i id="back-button" class="fa-solid fa-arrow-left" style="display: none" onclick="optionSelect('back')"></i>
   <p id="press-start">Press Start to Begin</p><br />
   <div id="options-parent">
@@ -20,31 +23,10 @@
       <a href="https://www.github.com/benr0th" class="fa-brands fa-github" target="_blank"></a>
       <a href="https://www.linkedin.com/in/benroth3" class="fa-brands fa-linkedin" target="_blank"></a>
       <!-- The main options. Clicking one hides the selections and displays the projects of the chosen section -->
-      <div id="option-1" class="option" onclick="optionSelect('programming')">Programming</div>
+      <div id="option-1" class="option selected" onclick="optionSelect('programming')">Programming</div>
       <div id="option-2" class="option" onclick="optionSelect('gameDev')">Game Dev</div>
-      <div id="option-3" class="option selected" onclick="optionSelect('editing')">Video Editing</div>
+      <div id="option-3" class="option" onclick="optionSelect('editing')">Video Editing</div>
     </div>
-  </div>
-  <!-- Editing Section -->
-  <div id="editing" style="display: none">
-    <iframe src="https://player.vimeo.com/video/311963855?h=fe92a30c98&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Tracey Re:Fragmented"></iframe>
-    <iframe src="https://player.vimeo.com/video/288795892?h=33c8ea49ea&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Blaudio Case Ad"></iframe>
-    <iframe src="https://player.vimeo.com/video/279712989?h=6a1b88a032&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="AdSurgeVideo Ad"></iframe>
-  </div>
-  <!-- Game Development Section -->
-  <div id="gameDev" style="display: none">
-    <div id="gameDev-1" class="box" style="display: none">
-      <div id="gBox-1">
-        <a href="https://broth-studios.itch.io/gravibowl" target="_blank" style="color: white">
-          <div id="gBowlText">A mobile game built with Unity and C#. Control a spaceship that uses gravity to launch towards the pins.</div>
-          <img src="https://lh3.googleusercontent.com/D7bn57-qzjymUHV0atNB0rBJ-QeA6sOJqnsRXs2g7khJdO3GflicAwG4NVhMXNM3c71l" class="gravThumbnail" height="300" width="300">
-        </a>
-        <i class="fa-brands fa-unity"></i>
-        <img src="./c-sharp-c.svg" class="cSharpLogo" height="40" width="40"></img>
-      </div>
-      <br>Gravibowl <a href="https://github.com/benr0th/Gravibowl" class="fa-brands fa-github" target="_blank"></a>
-    </div>
-    <div id="gameDev-2" class="box" style="display: none"></div>
   </div>
   <!-- Programming Section -->
   <div id="programming" style="display: none">
@@ -84,13 +66,29 @@
       <br>City of Heroes Randomizer <a href="https://github.com/benr0th/CoH-Randomizer" class="fa-brands fa-github" target="_blank"></a>
     </div>
   </div>
+  <!-- Game Development Section -->
+  <div id="gameDev" style="display: none">
+    <div id="gameDev-1" class="box" style="display: none">
+      <div id="gBox-1">
+        <a href="https://broth-studios.itch.io/gravibowl" target="_blank" style="color: white">
+          <div id="gBowlText">A mobile game built with Unity and C#. Control a spaceship that uses gravity to launch towards the pins.</div>
+          <img src="./gravScreen.png" class="gravThumbnail" height="300" width="300">
+        </a>
+        <i class="fa-brands fa-unity"></i>
+        <img src="./c-sharp-c.svg" class="cSharpLogo" height="40" width="40"></img>
+      </div>
+      <br>Gravibowl <a href="https://github.com/benr0th/Gravibowl" class="fa-brands fa-github" target="_blank"></a>
+    </div>
+    <div id="gameDev-2" class="box" style="display: none"></div>
+  </div>
+  <!-- Editing Section -->
+  <div id="editing" style="display: none">
+    <iframe src="https://player.vimeo.com/video/311963855?h=fe92a30c98&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Tracey Re:Fragmented"></iframe>
+    <iframe src="https://player.vimeo.com/video/288795892?h=33c8ea49ea&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Blaudio Case Ad"></iframe>
+    <iframe src="https://player.vimeo.com/video/279712989?h=6a1b88a032&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="AdSurgeVideo Ad"></iframe>
+  </div>
   <script type="module" src="/src/main.js"></script>
   <script>
-    function hideOptions() {
-      hideElement("options");
-      showElement("back-button", "");
-    }
-
     function hideElement(element) {
       document.getElementById(element).style.display = "none";
     }
@@ -99,14 +97,26 @@
       document.getElementById(element).style.display = style;
     }
 
+    function hideOptions() {
+      hideElement("options");
+      hideElement("mainBio");
+      showElement("back-button", "");
+    }
+
     function optionSelect(option) {
       if (option === "start") {
         hideElement("start-button");
         hideElement("press-start");
+        hideElement("name");
         showElement("options", "block");
+        showElement("mainBio", "block");
       }
       else if (option === "back") {
         showElement("options", "block");
+        showElement("mainBio", "block");
+        hideElement("progBio");
+        hideElement("gameBio");
+        hideElement("videoBio");
         hideElement("back-button");
         hideElement("editing");
         hideElement("gameDev");
@@ -114,43 +124,24 @@
       }
       else if (option === "editing") {
         hideOptions();
+        showElement("videoBio", "block");
         showElement("editing", "block");
       }
       else if (option === "gameDev") {
         hideOptions();
+        showElement("gameBio", "block");
         showElement("gameDev", "grid");
         showElement("gameDev-1", "inline-block");
       }
       else if (option === "programming") {
         hideOptions();
         showElement("programming", "grid");
+        showElement("progBio", "block");
         showElement("programming-1", "inline-block");
         showElement("programming-2", "inline-block");
         showElement("programming-3", "inline-block");
       }
     }
-
-    document.addEventListener("keydown", function(event) {
-      var selectedOption = document.getElementsByClassName("selected")[0];
-      if (document.getElementById("start-button").style.display === "none") {
-        if (event.code === "ArrowDown") {
-          var nextOption = selectedOption.nextElementSibling;
-          if (nextOption) {
-            selectedOption.classList.remove("selected");
-            nextOption.classList.add("selected");
-          }
-        } else if (event.code === "ArrowUp") {
-          var prevOption = selectedOption.previousElementSibling;
-          if (prevOption) {
-            selectedOption.classList.remove("selected");
-            prevOption.classList.add("selected");
-          }
-        }
-        if (event.code === "Enter") {
-          document.getElementsByClassName("selected")[0].click();
-        }
-      }
-    });
   </script>
 </body>
 </html>

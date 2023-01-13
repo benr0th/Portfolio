@@ -12,6 +12,14 @@ h1 {
 iframe {
   padding: 7px;
 }
+.bio {
+  font-size: 26px;
+  margin-top: 100px;
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-bottom: 3%;
+  text-align: center;
+}
 #press-start {
   font-size: 36px;
   margin-top: 50px;
