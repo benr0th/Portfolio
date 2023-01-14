@@ -22,6 +22,13 @@
       <i class="fa-solid fa-arrow-left" onclick="location.reload()" style="cursor: pointer"></i>
       <a href="https://www.github.com/benr0th" class="fa-brands fa-github" target="_blank"></a>
       <a href="https://www.linkedin.com/in/benroth3" class="fa-brands fa-linkedin" target="_blank"></a>
+      <div class="tooltip">
+        <a href="#" class="fa-regular fa-envelope" onclick=
+        "navigator.clipboard.writeText('business@benroth.dev'); document.getElementById('myTooltip').innerHTML = 'Copied: business@benroth.dev'"
+        onmouseout="document.getElementById('myTooltip').innerHTML = 'Copy to clipboard'">
+          <span id="myTooltip" class="tooltiptext">Copy to clipboard</span>
+        </a>
+      </div>
       <!-- The main options. Clicking one hides the selections and displays the projects of the chosen section -->
       <div id="option-1" class="option selected" onclick="optionSelect('programming')">Programming</div>
       <div id="option-2" class="option" onclick="optionSelect('gameDev')">Game Dev</div>
